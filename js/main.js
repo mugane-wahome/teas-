@@ -99,3 +99,24 @@
     
 })(jQuery);
 
+
+
+
+    function toggleDropdown() {
+        var dropdown = document.querySelector('.dropdown');
+        dropdown.classList.toggle('show');
+    }
+
+    
+    window.onclick = function(event) {
+        if (!event.target.matches('.button')) {
+            var dropdowns = document.querySelectorAll('.dropdown-content');
+            dropdowns.forEach(function(dropdown) {
+                if (dropdown.style.display === 'block') {
+                    dropdown.style.display = 'none';
+                }
+            });
+        }
+    }
+
+
